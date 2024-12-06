@@ -12,7 +12,9 @@ createModuleConfig(
   moduleUiFunction = "aboutViewer",
   moduleServerFunction = "aboutServer",
   moduleInfoBoxFile = "aboutHelperFile()",
-  moduleIcon = "info"
+  moduleIcon = "info",
+  installSource = "CRAN",
+  gitHubRepo = NULL
 )
 }
 \arguments{
@@ -31,6 +33,10 @@ createModuleConfig(
 \item{moduleInfoBoxFile}{The function in the R package shinyModulePackage that contains info text}
 
 \item{moduleIcon}{The icon to use for the side menu button}
+
+\item{installSource}{Either CRAN or github specifying where to install shinyModulePackage from}
+
+\item{gitHubRepo}{If installSource is github then this is the github repo containing the package e.g., 'ohdsi'}
 }
 \value{
 An R list with the module config settings

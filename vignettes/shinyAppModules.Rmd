@@ -15,11 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Using the Shiny App Builder
 
-The shiny app builder provides a way to combine different shiny modules into a single app.  For example, if you have a characterization study, an cohort method study and a prediction study that are related as they all use the same cohorts, then you may want to view the results in a single shiny app.  This can be done by using `OhdsiShinyAppBuilder` to combine the characterization, cohort method and prediction shiny modules in `OhdsiShinyModule`. The main source of shiny modules is the `OhdsiShinyModule` R package, however, it is possible to add modules from other R packages.
+The shiny app builder provides a way to combine different ohdsi shiny modules into a single app.  For example, if you have a characterization study, an cohort method study and a prediction study that are related as they all use the same cohorts, then you may want to view the results in a single shiny app.  This can be done by using `OhdsiShinyAppBuilder` to combine the characterization, cohort method and prediction shiny modules in `OhdsiShinyModules`. The main source of shiny modules is the `OhdsiShinyModules` R package, however, it is possible to add modules from other R packages.
 
 In this vignette we provide examples on how to use the `OhdsiShinyAppBuilder` to create flexible shiny apps for exploring OHDSI results.
 
-The `OhdsiShinyAppBuilder` requires that all results be explored by the shiny app are saved into a single database (i.e., all results for the different shiny modules in an app are saved into the same database), as a single database connection is shared across shiny modules. 
+The `OhdsiShinyAppBuilder` requires that all results to be explored by the shiny app are saved into a single database (i.e., all results for the different shiny modules in an app are saved into the same result database), as a single database connection is shared across shiny modules. 
 
 # Example 1
 
@@ -27,26 +27,32 @@ To create a shiny app that contains four shiny modules:
 
 - About (an introduction to the shiny app)
 - Cohort Generation (details about generated cohorts)
-- Cohort Method (details about causal inference studies via the cohort method)
+- Estimation (details about causal inference studies via the cohort method)
 - Prediction (details about patient level prediction models)
 
 All of these are available as shiny modules in `OhdsiShinyModules`.  
 
 ## Creating module config settings 
-To create the shiny app via `ShinyAppBuilder` we first need to create a config specification for all the shiny modules we wish to include into the single shiny app.  A config can be created using `createModuleConfig`.  
+To create the shiny app via `OhdsiShinyAppBuilder` we first need to create a config specification for all the shiny modules we wish to include into the single shiny app.  A config can be created using `createModuleConfig`.  
 
 ```{r echo=FALSE}
 
 inputsForConfig <- data.frame(
-  Inputs = c('moduleId','tabName','shinyModulePackage',
+  Inputs = c('moduleId','tabName',
+             'shinyModulePackage',
+             'shinyModulePackageVersion',
       'moduleUiFunction', 'moduleServerFunction',
       'moduleInfoBoxFile',
-      'moduleIcon'
+      'moduleIcon',
+      'installSource',
+      'gitHubRepo'
 ),
 
-Description = c("a unique id for the shiny app", "The menu text for the module", "The R package that contains the shiny module", "The name of the module's UI function", "The name of the module's server function", 
+Description = c("a unique id for the shiny app", "The menu text for the module", "The R package that contains the shiny module or NULL if using a local function", "The minimum version of shinyModulePackage that is require or NULL", "The name of the module's UI function", "The name of the module's server function", 
                 "The function in the shinyModulePackage package that contains the helper information",
-                "An icon to use in the menu for this module")
+                "An icon to use in the menu for this module",
+                "The Repo (CRAN or github) where users can install shinyModulePackage",
+                "If shinyModulePackage is available from github, this is the github repo you can find it")
 )
 
 knitr::kable(inputsForConfig)
@@ -57,18 +63,20 @@ Note: it is possible to add shiny modules from any R package by setting `shinyMo
 
 ## Creating the about module config 
 
-For the about module we will use the about shiny modules in `OhdsiShinyModule`.  The UI is named `aboutViewer`, the server is named `aboutServer` and the about helper function is called `aboutHelperFile()`. As the about module provides information about the shiny app, the 'info' icon seems appropriate. The inputs into `createModuleConfig` for an about module are:
+For the about module we will use the about shiny modules in `OhdsiShinyModules`.  The UI is named `aboutViewer`, the server is named `aboutServer` and the about helper function is called `aboutHelperFile()`. As the about module provides information about the shiny app, the 'info' icon seems appropriate. The inputs into `createModuleConfig` for an about module are:
 
 ```{r eval=FALSE}
 
 aboutModule <- createModuleConfig(
       moduleId = 'about',
       tabName = "About",
-      shinyModulePackage = "OhdsiShinyModule",
+      shinyModulePackage = "OhdsiShinyModules",
       moduleUiFunction = 'aboutViewer',
       moduleServerFunction = 'aboutServer',
       moduleInfoBoxFile =  "aboutHelperFile()",
-      moduleIcon = 'info'
+      moduleIcon = 'info',
+      installSource = 'github',
+      gitHubRepo = 'ohdsi'
     )
 
 ```
@@ -94,7 +102,9 @@ predictionModule <- createModuleConfig(
     moduleUiFunction = "predictionViewer",
     moduleServerFunction = "predictionServer",
     moduleInfoBoxFile =  "predictionHelperFile()",
-    moduleIcon = "chart-line"
+    moduleIcon = "chart-line",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
     )
 
 ```
@@ -109,7 +119,7 @@ predictionModule <- createDefaultPredictionConfig()
 
 ## Creating the cohort generation and cohort method using default functions
 
-We have default config creation for cohort method and cohort generation in `ShinyAppBuilder`:
+We have default config creation for cohort method and cohort generation in `OhdsiShinyAppBuilder`:
 
 ```{r eval=FALSE}
 
@@ -173,7 +183,9 @@ aboutModule <- createModuleConfig(
       moduleUiFunction = 'aboutViewer',
       moduleServerFunction = 'aboutServer',
       moduleInfoBoxFile =  "aboutHelperFile()",
-      moduleIcon = 'info'
+      moduleIcon = 'info',
+      installSource = 'github',
+      gitHubRepo = 'ohdsi'
     )
 
 predictionModule <- createModuleConfig(
@@ -183,7 +195,9 @@ predictionModule <- createModuleConfig(
     moduleUiFunction = "predictionViewer",
     moduleServerFunction = "predictionServer",
     moduleInfoBoxFile =  "predictionHelperFile()",
-    moduleIcon = "chart-line"
+    moduleIcon = "chart-line",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
     )
 
 cohortMethodModule <- createDefaultEstimationConfig()

@@ -27,6 +27,16 @@ ui <- function(
     directoryPath = system.file("www/images",package = themePackage)
   )
   
+  deps <- unique(do.call('rbind', lapply(config$shinyModules, function(x){
+    x$shinyModulePackage
+  })))
+  depString <- ''
+  if(length(deps)>0){
+    for(dep in deps){
+      depString <- paste0(depString, ' and ', dep," v", utils::packageVersion(dep))
+    }
+  }
+  
   return(
     shinydashboard::dashboardPage(
       skin = "black",
@@ -98,10 +108,9 @@ ui <- function(
         shiny::tags$footer(
           shiny::h6(
             paste0(
-              "Generated with OhdsiShinyModules v",
-              utils::packageVersion('OhdsiShinyModules'),
-              ' and OhdsiShinyAppBuilder v',
-              utils::packageVersion('OhdsiShinyAppBuilder')
+              "Generated with OhdsiShinyAppBuilder v",
+              utils::packageVersion('OhdsiShinyAppBuilder'),
+              depString
             )
           )
         )

@@ -1,6 +1,6 @@
 Package: OhdsiShinyAppBuilder
 Type: Package
-Title: Viewing OHDSI Results Via Shiny Modules
+Title: Viewing OHDSI Results via Shiny Modules
 Version: 1.0.0
 Date: 2024-12-03
 Authors@R: c(

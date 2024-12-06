@@ -30,6 +30,8 @@
 #' @param moduleServerFunction  The name of the server function in the R package shinyModulePackage
 #' @param moduleInfoBoxFile  The function in the R package shinyModulePackage that contains info text
 #' @param moduleIcon The icon to use for the side menu button
+#' @param installSource Either CRAN or github specifying where to install shinyModulePackage from
+#' @param gitHubRepo If installSource is github then this is the github repo containing the package e.g., 'ohdsi'
 #'                             
 #' @return
 #' An R list with the module config settings
@@ -43,7 +45,9 @@ createModuleConfig <- function(
  moduleUiFunction = "aboutViewer",
  moduleServerFunction = "aboutServer",
  moduleInfoBoxFile =  "aboutHelperFile()",
- moduleIcon = "info"
+ moduleIcon = "info",
+ installSource = 'CRAN',
+ gitHubRepo = NULL
 ){
 
   result <- list(
@@ -55,7 +59,9 @@ createModuleConfig <- function(
     uiFunction = moduleUiFunction,
     serverFunction = moduleServerFunction,
     infoBoxFile = moduleInfoBoxFile,
-    icon = moduleIcon
+    icon = moduleIcon,
+    installSource = installSource,
+    gitHubRepo = NULL
   )
 
   class(result) <- "shinyModuleConfig"
@@ -86,7 +92,9 @@ createDefaultHomeConfig <- function(
     moduleUiFunction = "homeViewer",
     moduleServerFunction = "homeServer",
     moduleInfoBoxFile =  "homeHelperFile()",
-    moduleIcon = "house"
+    moduleIcon = "house",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   
   class(result) <- c(class(result), "homeModuleConfig")
@@ -116,7 +124,9 @@ createDefaultAboutConfig <- function(
     moduleUiFunction = "aboutViewer",
     moduleServerFunction = "aboutServer",
     moduleInfoBoxFile =  "aboutHelperFile()",
-    moduleIcon = "info-circle"
+    moduleIcon = "info-circle",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
 
   class(result) <- c(class(result), "aboutModuleConfig")
@@ -147,7 +157,9 @@ createDefaultPredictionConfig <- function(
     moduleUiFunction = "patientLevelPredictionViewer",
     moduleServerFunction = "patientLevelPredictionServer",
     moduleInfoBoxFile =  "patientLevelPredictionHelperFile()",
-    moduleIcon = "chart-line"
+    moduleIcon = "chart-line",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   class(result) <- c(class(result), "predictionModuleConfig")
   return(result)
@@ -176,7 +188,9 @@ createDefaultEstimationConfig <- function(
     moduleUiFunction = 'estimationViewer', 
     moduleServerFunction = 'estimationServer', 
     moduleInfoBoxFile = 'estimationHelperFile()', 
-    moduleIcon = 'list'
+    moduleIcon = 'list',
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   class(result) <- c(class(result), "estimationModuleConfig")
   return(result)
@@ -205,7 +219,9 @@ createDefaultCharacterizationConfig <- function(
     moduleUiFunction = "characterizationViewer",
     moduleServerFunction = "characterizationServer",
     moduleInfoBoxFile =  "characterizationHelperFile()",
-    moduleIcon = "table"
+    moduleIcon = "table",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
 
   class(result) <- c(class(result), "characterizationModuleConfig")
@@ -236,7 +252,9 @@ createDefaultCohortGeneratorConfig <- function(
     moduleUiFunction = "cohortGeneratorViewer",
     moduleServerFunction = "cohortGeneratorServer",
     moduleInfoBoxFile =  "cohortGeneratorHelperFile()",
-    moduleIcon = "user-gear"
+    moduleIcon = "user-gear",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
 
   class(result) <- c(class(result), "cohortGeneratorModuleConfig")
@@ -266,7 +284,9 @@ createDefaultCohortDiagnosticsConfig <- function(
     moduleUiFunction = "cohortDiagnosticsView",
     moduleServerFunction = "cohortDiagnosticsServer",
     moduleInfoBoxFile =  "cohortDiagnosticsHelperFile()",
-    moduleIcon = "users"
+    moduleIcon = "users",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   class(result) <- c(class(result), "cohortDiagnosticsModuleConfig")
   return(result)
@@ -296,7 +316,9 @@ createDefaultPhevaluatorConfig <- function(
     moduleUiFunction = "phevaluatorViewer",
     moduleServerFunction = "phevaluatorServer",
     moduleInfoBoxFile =  "phevaluatorHelperFile()",
-    moduleIcon = "gauge"
+    moduleIcon = "gauge",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   class(result) <- c(class(result), "phevaluatorModuleConfig")
   return(result)
@@ -325,7 +347,9 @@ createDefaultDatasourcesConfig <- function(
     moduleUiFunction = "datasourcesViewer",
     moduleServerFunction = "datasourcesServer",
     moduleInfoBoxFile =  "datasourcesHelperFile()",
-    moduleIcon = "database"
+    moduleIcon = "database",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   class(result) <- c(class(result), "datasourcesModuleConfig")
   return(result)
@@ -354,7 +378,9 @@ createDefaultReportConfig <- function(
     moduleUiFunction = "reportViewer",
     moduleServerFunction = "reportServer",
     moduleInfoBoxFile =  "reportHelperFile()",
-    moduleIcon = "book"
+    moduleIcon = "book",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
   )
   
   class(result) <- c(class(result), "reportModuleConfig")

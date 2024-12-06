@@ -6,13 +6,13 @@
     "tabName": "About", 
     "tabText": "About",
     "shinyModulePackage":"OhdsiShinyModules",
+    "shinyModulePackageVersion": "3.0.0",
     "uiFunction": "aboutViewer",
     "serverFunction": "aboutServer",
-    "databaseConnectionKeyService": "null",
-    "databaseConnectionKeyUsername": "null",
     "infoBoxFile": "aboutHelperFile()",
-    "icon": "info",
-    "keyring": true
+    "icon": "info-circle",
+    "installSource": "github",
+    "gitHubRepo": "ohdsi"
   },
   
   {
@@ -21,13 +21,13 @@
     "tabName": "CohortGenerator", 
     "tabText": "CohortGenerator",
     "shinyModulePackage":"OhdsiShinyModules",
+    "shinyModulePackageVersion": "3.0.0",
     "uiFunction": "cohortGeneratorViewer",
     "serverFunction": "cohortGeneratorServer",
-    "databaseConnectionKeyService": "resultDatabaseSettings",
-    "databaseConnectionKeyUsername": "cohortGenerator",
     "infoBoxFile": "cohortGeneratorHelperFile()",
-    "icon": "info",
-    "keyring": true
+    "icon": "user-gear",
+    "installSource": "github",
+    "gitHubRepo": "ohdsi"
   },
   
    {
@@ -36,13 +36,13 @@
     "tabName": "Description", 
     "tabText": "Description",
     "shinyModulePackage":"OhdsiShinyModules",
+    "shinyModulePackageVersion": "3.0.0",
     "uiFunction": "descriptionViewer",
     "serverFunction": "descriptionServer",
-    "databaseConnectionKeyService": "resultDatabaseSettings",
-    "databaseConnectionKeyUsername": "description",
     "infoBoxFile": "descriptionHelperFile()",
     "icon": "table",
-    "keyring": true
+    "installSource": "github",
+    "gitHubRepo": "ohdsi"
   },
   
   {
@@ -51,13 +51,13 @@
     "tabName": "Estimation", 
     "tabText": "Estimation",
     "shinyModulePackage":"OhdsiShinyModules",
+    "shinyModulePackageVersion": "3.0.0",
     "uiFunction": "estimationViewer",
     "serverFunction": "estimationServer",
-    "databaseConnectionKeyService": "resultDatabaseSettings",
-    "databaseConnectionKeyUsername": "estimation",
     "infoBoxFile": "estimationHelperFile()",
-    "icon": "table",
-    "keyring": true
+    "icon": "list",
+    "installSource": "github",
+    "gitHubRepo": "ohdsi"
   },
   
   {
@@ -66,13 +66,13 @@
     "tabName": "Prediction", 
     "tabText": "Prediction",
     "shinyModulePackage":"OhdsiShinyModules",
+    "shinyModulePackageVersion": "3.0.0",
     "uiFunction": "predictionViewer",
     "serverFunction": "predictionServer",
-    "databaseConnectionKeyService": "resultDatabaseSettings",
-    "databaseConnectionKeyUsername": "prediction",
     "infoBoxFile": "predictionHelperFile()",
     "icon": "chart-line",
-    "keyring": true
+    "installSource": "github",
+    "gitHubRepo": "ohdsi"
   }
   
  

@@ -60,7 +60,9 @@ createShinyApp <- function(
   deps <- unique(do.call('rbind', lapply(config$shinyModules, function(x){
     data.frame(
       shinyModulePackage = ifelse(is.null(x$shinyModulePackage),'none',x$shinyModulePackage), 
-      shinyModulePackageVersion = ifelse(is.null(x$shinyModulePackageVersion),'none',x$shinyModulePackageVersion)
+      shinyModulePackageVersion = ifelse(is.null(x$shinyModulePackageVersion),'none',x$shinyModulePackageVersion),
+      installSource = ifelse(is.null(x$installSource),'CRAN',x$installSource),
+      gitHubRepo = ifelse(is.null(x$gitHubRepo),'ohdsi',x$gitHubRepo)
       )
     })))
   
@@ -75,11 +77,12 @@ createShinyApp <- function(
           if(interactive()){
             installVal <- utils::menu(c("Yes", "No"), title= paste0("Package ", deps$shinyModulePackage[i] ," required but not installed. Do you want to install?"))
             if(installVal == 1){
-              if(deps$shinyModulePackage[i] != "OhdsiShinyModules"){
+              if(deps$installSource[i] == "CRAN"){
                 utils::install.packages(deps$shinyModulePackage[i])
               } else{
-                devtools::install_github('ohdsi/OhdsiShinyModules')
+                devtools::install_github(paste0(deps$gitHubRepo[i],'/', deps$shinyModulePackage[i]))
               }
+              versionNum <- tryCatch({utils::packageVersion(deps$shinyModulePackage[i])}, error = function(e) return(NULL))
             }
           }
         }

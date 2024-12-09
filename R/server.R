@@ -26,13 +26,23 @@ addInfo <- function(item, infoId) {
 }
 
 showInfoBox <- function(title, htmlFileName) {
-  shiny::showModal(shiny::modalDialog(
-    title = title,
-    easyClose = TRUE,
-    footer = NULL,
-    size = "l",
-    shiny::HTML(readChar(htmlFileName, file.info(htmlFileName)$size))
-  ))
+  if(file.exists(htmlFileName)){
+    shiny::showModal(shiny::modalDialog(
+      title = title,
+      easyClose = TRUE,
+      footer = NULL,
+      size = "l",
+      shiny::HTML(readChar(htmlFileName, file.info(htmlFileName)$size))
+    ))
+  } else{
+    shiny::showModal(shiny::modalDialog(
+      title = title,
+      easyClose = TRUE,
+      footer = NULL,
+      size = "l",
+      shiny::HTML('No information available')
+    ))
+  }
 }
 
 server <- function(config, connection, resultDatabaseSettings) {

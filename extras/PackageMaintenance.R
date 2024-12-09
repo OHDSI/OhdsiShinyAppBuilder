@@ -25,11 +25,5 @@ devtools::spell_check()
 unlink("extras/OhdsiShinyAppBuilder.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/OhdsiShinyAppBuilder.pdf")
 
-rmarkdown::render("vignettes/shinyAppModules.Rmd",
-                  output_file = "../inst/doc/shinyAppModules.pdf",
-                  rmarkdown::pdf_document(latex_engine = "pdflatex",
-                                          toc = TRUE,
-                                          number_sections = TRUE))
-
 pkgdown::build_site()
 OhdsiRTools::fixHadesLogo()

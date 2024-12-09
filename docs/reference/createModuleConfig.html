@@ -38,7 +38,7 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
-      <a href="../articles/shinyAppModules.html">Using OHDSI Shiny App Builder</a>
+      <a href="../articles/shinyAppModules.html">Using OhdsiShinyAppBuilder</a>
     </li>
   </ul></li>
 <li>
@@ -63,7 +63,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>createModuleConfig</h1>
-    <small class="dont-index">Source: <a href="https://github.com/OHDSI/OhdsiShinyAppBuilder/blob/HEAD/R/CreateConfig.R" class="external-link"><code>R/CreateConfig.R</code></a></small>
+    
     <div class="hidden name"><code>createModuleConfig.Rd</code></div>
     </div>
 
@@ -80,7 +80,9 @@
 <span>  moduleUiFunction <span class="op">=</span> <span class="st">"aboutViewer"</span>,</span>
 <span>  moduleServerFunction <span class="op">=</span> <span class="st">"aboutServer"</span>,</span>
 <span>  moduleInfoBoxFile <span class="op">=</span> <span class="st">"aboutHelperFile()"</span>,</span>
-<span>  moduleIcon <span class="op">=</span> <span class="st">"info"</span></span>
+<span>  moduleIcon <span class="op">=</span> <span class="st">"info"</span>,</span>
+<span>  installSource <span class="op">=</span> <span class="st">"CRAN"</span>,</span>
+<span>  gitHubRepo <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -116,6 +118,14 @@
 
 <dt>moduleIcon</dt>
 <dd><p>The icon to use for the side menu button</p></dd>
+
+
+<dt>installSource</dt>
+<dd><p>Either CRAN or github specifying where to install shinyModulePackage from</p></dd>
+
+
+<dt>gitHubRepo</dt>
+<dd><p>If installSource is github then this is the github repo containing the package e.g., 'ohdsi'</p></dd>
 
 </dl></div>
     <div id="value">

@@ -8,15 +8,6 @@
 \description{
 A package for creating viewers for the OHDSI shiny apps
 }
-\seealso{
-Useful links:
-\itemize{
-  \item \url{https://ohdsi.github.io/OhdsiShinyAppBuilder}
-  \item \url{https://github.com/OHDSI/OhdsiShinyAppBuilder}
-  \item Report bugs at \url{https://github.com/OHDSI/OhdsiShinyAppBuilder/issues}
-}
-
-}
 \author{
 \strong{Maintainer}: Jenna Reps \email{jreps@its.jnj.com}
 

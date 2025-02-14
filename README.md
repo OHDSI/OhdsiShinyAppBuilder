@@ -1,6 +1,8 @@
 # OhdsiShinyAppBuilder
 
 [![Build Status](https://github.com/OHDSI/OhdsiShinyAppBuilder/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/OhdsiShinyAppBuilder/actions?query=workflow%3AR-CMD-check) [![codecov.io](https://codecov.io/github/OHDSI/OhdsiShinyAppBuilder/coverage.svg?branch=main)](https://codecov.io/github/OHDSI/OhdsiShinyAppBuilder?branch=main)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/OhdsiShinyAppBuilder)](https://cran.r-project.org/package=OhdsiShinyAppBuilder)
+[![CRAN_Status_Badge](https://cranlogs.r-pkg.org/badges/OhdsiShinyAppBuilder)](https://cran.r-project.org/package=OhdsiShinyAppBuilder)
 
 OhdsiShinyAppBuilder is part of [HADES](https://ohdsi.github.io/Hades/).
 

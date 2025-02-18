@@ -101,7 +101,7 @@ remotes::install_github("ohdsi/OhdsiShinyAppBuilder")
 
 # User Documentation
 
-Documentation can be found on the [package website](https://ohdsi.github.io/OhdsiShinyAppBuilder/).
+Documentation can be found on the [package website](https://ohdsi.github.io/OhdsiShinyAppBuilder/dev).
 
 # Support
 

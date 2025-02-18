@@ -15,3 +15,20 @@ Create an R list with the about config specification
 \details{
 User specifies the settings to create a default config for an about module
 }
+\seealso{
+Other ModuleConfig: 
+\code{\link{createDefaultAboutConfig}()},
+\code{\link{createDefaultCharacterizationConfig}()},
+\code{\link{createDefaultCohortDiagnosticsConfig}()},
+\code{\link{createDefaultCohortGeneratorConfig}()},
+\code{\link{createDefaultCohortMethodConfig}()},
+\code{\link{createDefaultDatasourcesConfig}()},
+\code{\link{createDefaultEstimationConfig}()},
+\code{\link{createDefaultEvidenceSynthesisConfig}()},
+\code{\link{createDefaultPhevaluatorConfig}()},
+\code{\link{createDefaultPredictionConfig}()},
+\code{\link{createDefaultReportConfig}()},
+\code{\link{createDefaultSccsConfig}()},
+\code{\link{createModuleConfig}()}
+}
+\concept{ModuleConfig}

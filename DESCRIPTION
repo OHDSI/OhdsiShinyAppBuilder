@@ -1,7 +1,7 @@
 Package: OhdsiShinyAppBuilder
 Type: Package
 Title: Viewing Observational Health Data Sciences and Informatics Results via 'shiny' Modules
-Version: 1.0.0
+Version: 1.0.0.9000
 Date: 2024-12-09
 Authors@R: c(
   person("Jenna", "Reps", email = "jreps@its.jnj.com", role = c("aut", "cre")),
@@ -34,5 +34,5 @@ Suggests:
   testthat,
   markdown,
   remotes
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Encoding: UTF-8

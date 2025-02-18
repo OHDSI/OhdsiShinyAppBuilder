@@ -20,3 +20,10 @@ Save the R list with the config specification as a json
 \details{
 User saves the R list with the config as a json file
 }
+\seealso{
+Other Config: 
+\code{\link{addModuleConfig}()},
+\code{\link{initializeModuleConfig}()},
+\code{\link{loadConfig}()}
+}
+\concept{Config}

@@ -18,3 +18,10 @@ Load the config specification
 \details{
 User specifies the config file and this function returns the R list with the config
 }
+\seealso{
+Other Config: 
+\code{\link{addModuleConfig}()},
+\code{\link{initializeModuleConfig}()},
+\code{\link{saveConfig}()}
+}
+\concept{Config}

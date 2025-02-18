@@ -39,7 +39,8 @@
 #' 
 #' @return
 #' An R list with the module config settings
-#'
+#' 
+#' @family DefaultResultDatabase
 #' @export
 #' 
 createDefaultResultDatabaseSettings <- function(

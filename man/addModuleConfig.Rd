@@ -20,3 +20,10 @@ Create an R list with the config specification for one or more modules
 \details{
 User specifies the settings to create a config for a module
 }
+\seealso{
+Other Config: 
+\code{\link{initializeModuleConfig}()},
+\code{\link{loadConfig}()},
+\code{\link{saveConfig}()}
+}
+\concept{Config}

@@ -59,3 +59,4 @@ Create an R list with the default table prefixes and tables
 \details{
 User specifies the schema name and can override default table prefixes and table names
 }
+\concept{DefaultResultDatabase}

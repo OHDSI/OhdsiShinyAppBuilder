@@ -26,7 +26,8 @@
 #' @param configLocation  The location to save the config json file                                     
 #' @return
 #' An R list with the config settings
-#'
+#' 
+#' @family Config
 #' @export
 saveConfig <- function(configList,configLocation){
   ParallelLogger::saveSettingsToJson(
@@ -49,7 +50,8 @@ saveConfig <- function(configList,configLocation){
 #' @param configLocation  The location of the config json file                                     
 #' @return
 #' An R list with the config settings
-#'
+#' 
+#' @family Config
 #' @export
 loadConfig <- function(configLocation){
   configList <- ParallelLogger::loadSettingsFromJson(

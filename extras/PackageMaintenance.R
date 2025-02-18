@@ -21,9 +21,3 @@ OhdsiRTools::updateCopyrightYearFolder()
 OhdsiRTools::findNonAsciiStringsInFolder()
 devtools::spell_check()
 
-# Create manual and vignettes:
-unlink("extras/OhdsiShinyAppBuilder.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/OhdsiShinyAppBuilder.pdf")
-
-pkgdown::build_site()
-OhdsiRTools::fixHadesLogo()

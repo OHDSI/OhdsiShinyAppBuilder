@@ -15,3 +15,10 @@ Creates an empty config
 \details{
 An empty config that can be used to add shiny module configs to
 }
+\seealso{
+Other Config: 
+\code{\link{addModuleConfig}()},
+\code{\link{loadConfig}()},
+\code{\link{saveConfig}()}
+}
+\concept{Config}

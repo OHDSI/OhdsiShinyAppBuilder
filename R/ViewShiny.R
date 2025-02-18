@@ -36,6 +36,7 @@
 #' @return
 #' Shiny app instance
 #'
+#' @family Shiny
 #' @export
 createShinyApp <- function(
     config,
@@ -197,7 +198,8 @@ createShinyApp <- function(
 #' @inheritParams createShinyApp                 
 #' @return
 #' The shiny app will open
-#'
+#' 
+#' @family Shiny
 #' @export
 viewShiny <- function(
     config,

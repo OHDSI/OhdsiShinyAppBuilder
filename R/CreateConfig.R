@@ -35,7 +35,7 @@
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createModuleConfig <- function(
  moduleId = 'about',
@@ -80,7 +80,7 @@ createModuleConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultHomeConfig <- function(
 ){
@@ -112,7 +112,7 @@ createDefaultHomeConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultAboutConfig <- function(
 ){
@@ -144,7 +144,7 @@ createDefaultAboutConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultPredictionConfig <- function(
 ){
@@ -175,7 +175,7 @@ createDefaultPredictionConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultEstimationConfig <- function(
 ){
@@ -206,7 +206,7 @@ createDefaultEstimationConfig <- function(
 #' 
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultCharacterizationConfig <- function(
 ){
@@ -239,7 +239,7 @@ createDefaultCharacterizationConfig <- function(
 #' 
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultCohortGeneratorConfig <- function(
 ){
@@ -271,7 +271,7 @@ createDefaultCohortGeneratorConfig <- function(
 #'
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultCohortDiagnosticsConfig <- function(
 ){
@@ -303,7 +303,7 @@ createDefaultCohortDiagnosticsConfig <- function(
 #' 
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultPhevaluatorConfig <- function(
 ){
@@ -334,7 +334,7 @@ createDefaultPhevaluatorConfig <- function(
 #' 
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultDatasourcesConfig <- function(
 ){
@@ -366,7 +366,7 @@ createDefaultDatasourcesConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultReportConfig <- function(
 ){
@@ -399,7 +399,7 @@ createDefaultReportConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultCohortMethodConfig <- function(
 ){
@@ -419,7 +419,7 @@ createDefaultCohortMethodConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' @family ModuleConfig
 #' @export
 createDefaultSccsConfig <- function(
 ){
@@ -439,7 +439,8 @@ createDefaultSccsConfig <- function(
 #'                             
 #' @return
 #' An R list with the module config settings
-#'
+#' 
+#' @family ModuleConfig
 #' @export
 createDefaultEvidenceSynthesisConfig <- function(
 ){

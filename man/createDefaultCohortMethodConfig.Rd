@@ -15,3 +15,20 @@ Create an R list with the cohort method config specification (depreciated)
 \details{
 User specifies the settings to create a default config for a cohort method module
 }
+\seealso{
+Other ModuleConfig: 
+\code{\link{createDefaultAboutConfig}()},
+\code{\link{createDefaultCharacterizationConfig}()},
+\code{\link{createDefaultCohortDiagnosticsConfig}()},
+\code{\link{createDefaultCohortGeneratorConfig}()},
+\code{\link{createDefaultDatasourcesConfig}()},
+\code{\link{createDefaultEstimationConfig}()},
+\code{\link{createDefaultEvidenceSynthesisConfig}()},
+\code{\link{createDefaultHomeConfig}()},
+\code{\link{createDefaultPhevaluatorConfig}()},
+\code{\link{createDefaultPredictionConfig}()},
+\code{\link{createDefaultReportConfig}()},
+\code{\link{createDefaultSccsConfig}()},
+\code{\link{createModuleConfig}()}
+}
+\concept{ModuleConfig}

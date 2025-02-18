@@ -15,3 +15,20 @@ Create an R list with the report config specification
 \details{
 User specifies the settings to create a default config for a report module
 }
+\seealso{
+Other ModuleConfig: 
+\code{\link{createDefaultAboutConfig}()},
+\code{\link{createDefaultCharacterizationConfig}()},
+\code{\link{createDefaultCohortDiagnosticsConfig}()},
+\code{\link{createDefaultCohortGeneratorConfig}()},
+\code{\link{createDefaultCohortMethodConfig}()},
+\code{\link{createDefaultDatasourcesConfig}()},
+\code{\link{createDefaultEstimationConfig}()},
+\code{\link{createDefaultEvidenceSynthesisConfig}()},
+\code{\link{createDefaultHomeConfig}()},
+\code{\link{createDefaultPhevaluatorConfig}()},
+\code{\link{createDefaultPredictionConfig}()},
+\code{\link{createDefaultSccsConfig}()},
+\code{\link{createModuleConfig}()}
+}
+\concept{ModuleConfig}

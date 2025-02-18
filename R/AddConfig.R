@@ -26,7 +26,8 @@
 #' @param moduleConfig A module config to be added
 #' @return
 #' An R list with the module config settings
-#'
+#' 
+#' @family Config
 #' @export
 #' 
 addModuleConfig <- function(
@@ -50,7 +51,8 @@ addModuleConfig <- function(
 #' 
 #' @return
 #' An empty list
-#'
+#' 
+#' @family Config
 #' @export
 #' 
 initializeModuleConfig <- function(){

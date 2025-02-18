@@ -47,3 +47,8 @@ Create a shiny app for a shiny server
 \details{
 User specifies the json config and connection
 }
+\seealso{
+Other Shiny: 
+\code{\link{viewShiny}()}
+}
+\concept{Shiny}

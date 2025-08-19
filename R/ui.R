@@ -83,7 +83,8 @@ ui <- function(
           title = shiny::span(
             shiny::icon("lightbulb"), 
             'Study Description'
-          ),
+          ), 
+          collapsible = TRUE,
           shiny::HTML(studyDescription)
         ),
         

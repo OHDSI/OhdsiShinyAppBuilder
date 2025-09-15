@@ -21,7 +21,7 @@ Imports:
   devtools,
   dplyr,
   ParallelLogger (>= 2.0.0),
-  ResultModelManager (>= 0.4.0),
+  ResultModelManager (>= 0.6.0),
   rlang,
   shiny,
   shinydashboard,

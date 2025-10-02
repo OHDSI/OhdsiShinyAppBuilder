@@ -109,7 +109,7 @@ createShinyApp <- function(
   
   if(!is.null(reportSummaryDetails)){
     
-    if(sum(c('reportLocation','reportName') %in% colnames(reportSummaryDetails)) == 2){
+    if(sum(c('reportLocation','reportName')  colnames(reportSummaryDetails)) == 2){
       
       # create a temp folder to move the reports into
       # set a temp environmental var to the temp folder location
@@ -142,7 +142,7 @@ createShinyApp <- function(
     if (missing(connection) || is.null(connection)) {
     checkmate::assertClass(connectionDetails, "ConnectionDetails")
 
-    if (connectionDetails$dbms %in% c("sqlite", "duckdb")) {
+    if (!connectionDetails$dbms %in% c("sqlite", "duckdb")) {
       if (length(list.files(connectionDetails$pathToDriver, pattern = connectionDetails$dbms)) == 0) {
         DatabaseConnector::downloadJdbcDrivers(
           dbms = connectionDetails$dbms,

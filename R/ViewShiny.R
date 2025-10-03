@@ -81,7 +81,7 @@ createShinyApp <- function(
               if(deps$installSource[i] == "CRAN"){
                 utils::install.packages(deps$shinyModulePackage[i])
               } else{
-                devtools::install_github(paste0(deps$gitHubRepo[i],'/', deps$shinyModulePackage[i]))
+                remotes::install_github(paste0(deps$gitHubRepo[i],'/', deps$shinyModulePackage[i]))
               }
               versionNum <- tryCatch({utils::packageVersion(deps$shinyModulePackage[i])}, error = function(e) return(NULL))
             }

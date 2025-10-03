@@ -18,21 +18,21 @@ Depends:
 Imports:
   checkmate,
   DatabaseConnector,
-  devtools,
   dplyr,
   ParallelLogger (>= 2.0.0),
+  remotes,
   ResultModelManager (>= 0.5.0),
   rlang,
   shiny,
   shinydashboard,
   utils
 Suggests:
+  devtools,
   Eunomia,
   jsonlite,
   knitr,
   rmarkdown,
   testthat,
-  markdown,
-  remotes
+  markdown
 RoxygenNote: 7.3.2
 Encoding: UTF-8

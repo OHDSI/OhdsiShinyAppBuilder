@@ -16,9 +16,8 @@ To create a shiny viewer to explore CohortDiagnostic results, Characterization r
 
 ``` r
 
-# install dependencies
-remotes::install_github('ohdsi/ResultModelManager')
-remotes::install_github('ohdsi/OhdsiShinyAppBuilder')
+# install package
+install.packages('OhdsiShinyAppBuilder')
 
 library(dplyr)
 library(OhdsiShinyAppBuilder)
@@ -95,8 +94,9 @@ Running the package requires R.
 2.  In R, use the following commands to download and install OhdsiShinyAppBuilder:
 
 ``` r
-install.packages("remotes")
-remotes::install_github("ohdsi/OhdsiShinyAppBuilder")
+# Install from CRAN
+install.packages('OhdsiShinyAppBuilder')
+
 ```
 
 # User Documentation

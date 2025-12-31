@@ -59,7 +59,7 @@ createDefaultResultDatabaseSettings <- function(
     sccsTablePrefix = 'sccs_',
     esTablePrefix = 'es_',
     pvTablePrefix = 'pv_',
-    tpTablePrefix = "tp_"
+    tpTablePrefix = 'tp_'
 ){
   
   resultDatabaseSettings <- list(

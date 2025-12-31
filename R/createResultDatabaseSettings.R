@@ -76,7 +76,8 @@ createDefaultResultDatabaseSettings <- function(
     cmTablePrefix = cmTablePrefix,
     sccsTablePrefix = sccsTablePrefix,
     esTablePrefix = esTablePrefix,
-    pvTablePrefix = pvTablePrefix
+    pvTablePrefix = pvTablePrefix,
+    tpTablePrefix = tpTablePrefix
   )
   
   return(resultDatabaseSettings)

@@ -36,6 +36,7 @@
 #' @param sccsTablePrefix The table prefix for the self controlled case series results
 #' @param esTablePrefix The table prefix for the evidence synthesis method results
 #' @param pvTablePrefix The table prefix for the phevaluator results
+#' @param tpTablePrefix The table prefix for the treatment patterns results
 #' 
 #' @return
 #' An R list with the module config settings
@@ -57,7 +58,8 @@ createDefaultResultDatabaseSettings <- function(
     cmTablePrefix = 'cm_',
     sccsTablePrefix = 'sccs_',
     esTablePrefix = 'es_',
-    pvTablePrefix = 'pv_'
+    pvTablePrefix = 'pv_',
+    tpTablePrefix = "tp_"
 ){
   
   resultDatabaseSettings <- list(

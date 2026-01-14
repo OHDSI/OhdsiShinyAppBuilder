@@ -448,3 +448,36 @@ createDefaultEvidenceSynthesisConfig <- function(
   result <- createDefaultEstimationConfig()
   return(result)
 }
+
+
+#' createDefaultTreatmentPatternsConfig
+#'
+#' @description
+#' Create an R list with the treatment patterns config specification (depreciated)
+#'
+#' @details
+#' User specifies the settings to create a default config for a Treatment Patterns module
+#'
+#'
+#' @return
+#' An R list with the module config settings
+#'
+#' @family ModuleConfig
+#' @export
+createDefaultTreatmentPatternsConfig <- function() {
+  result <- createModuleConfig(
+    moduleId = "treatmentPatterns",
+    tabName = "TreatmentPatterns",
+    shinyModulePackage = "OhdsiShinyModules",
+    shinyModulePackageVersion = "3.0.0",
+    moduleUiFunction = "treatmentPatternsViewer",
+    moduleServerFunction = "treatmentPatternsServer ",
+    moduleInfoBoxFile = "treatmentPatternsHelperFile()",
+    moduleIcon = "sitemap",
+    installSource = "github",
+    gitHubRepo = "ohdsi"
+  )
+  
+  class(result) <- c(class(result), "reportModuleConfig")
+  return(result)
+}

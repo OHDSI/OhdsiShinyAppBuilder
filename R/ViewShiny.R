@@ -31,6 +31,7 @@
 #' @param title The title for the app.  Defaults to: OHDSI Analysis Viewer
 #' @param protocolLink A link to a site containing the study protocol
 #' @param themePackage A package containing custom theme elements
+#' @param htmlHeader Additional HTML to add to the shiny app header
 #' @param reportSummaryDetails NULL or a data.frame with the columns reportName and reportLocation
 #'
 #' @return
@@ -48,6 +49,7 @@ createShinyApp <- function(
     title = "OHDSI Analysis Viewer",
     protocolLink = 'http://ohdsi.org',
     themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = '',
     reportSummaryDetails = NULL
       ){
   
@@ -172,7 +174,8 @@ createShinyApp <- function(
       title = title,
       link = protocolLink,
       studyDescription = studyDescription,
-      themePackage = themePackage
+      themePackage = themePackage,
+      htmlHeader = htmlHeader
     ),
     server = server(
       config = config, 
@@ -210,7 +213,8 @@ viewShiny <- function(
     studyDescription = NULL,
     title = "OHDSI Analysis Viewer",
     protocolLink = 'http://ohdsi.org',
-    themePackage = "OhdsiShinyAppBuilder"
+    themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = ''
     ){
   
   app <- createShinyApp(
@@ -222,7 +226,8 @@ viewShiny <- function(
     studyDescription = studyDescription,
     title = title,
     protocolLink = protocolLink,
-    themePackage = themePackage
+    themePackage = themePackage,
+    htmlHeader = htmlHeader
     )
   
   shiny::runApp(app)

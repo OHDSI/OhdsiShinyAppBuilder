@@ -19,7 +19,8 @@ ui <- function(
     title = "OHDSI Analysis Viewer",
     studyDescription = "Further details about the analyses used in this study can be found below.",
     link = 'http://ohdsi.org',
-    themePackage = "OhdsiShinyAppBuilder"
+    themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = ''
 ) {
   
   shiny::addResourcePath(
@@ -114,6 +115,10 @@ ui <- function(
               depString
             )
           )
+        ),
+        
+        shiny::tags$head(
+          shiny::HTML(htmlHeader)
         )
         
       )

@@ -13,7 +13,8 @@ viewShiny(
   studyDescription = NULL,
   title = "OHDSI Analysis Viewer",
   protocolLink = "http://ohdsi.org",
-  themePackage = "OhdsiShinyAppBuilder"
+  themePackage = "OhdsiShinyAppBuilder",
+  htmlHeader = ""
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ viewShiny(
 \item{protocolLink}{A link to a site containing the study protocol}
 
 \item{themePackage}{A package containing custom theme elements}
+
+\item{htmlHeader}{Additional HTML to add to the shiny app header}
 }
 \value{
 The shiny app will open

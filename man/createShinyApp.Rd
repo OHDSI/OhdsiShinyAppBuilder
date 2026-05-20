@@ -14,6 +14,7 @@ createShinyApp(
   title = "OHDSI Analysis Viewer",
   protocolLink = "http://ohdsi.org",
   themePackage = "OhdsiShinyAppBuilder",
+  htmlHeader = "",
   reportSummaryDetails = NULL
 )
 }
@@ -35,6 +36,8 @@ createShinyApp(
 \item{protocolLink}{A link to a site containing the study protocol}
 
 \item{themePackage}{A package containing custom theme elements}
+
+\item{htmlHeader}{Additional HTML to add to the shiny app header}
 
 \item{reportSummaryDetails}{NULL or a data.frame with the columns reportName and reportLocation}
 }

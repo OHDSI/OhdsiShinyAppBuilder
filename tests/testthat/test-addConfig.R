@@ -22,18 +22,18 @@ test_that("addModuleConfig works", {
   
   newCon <- addModuleConfig(
     config = newCon, 
-    moduleConfig = list(add=T)
+    moduleConfig = list(add=TRUE)
   )
   
-  testthat::expect_equal(newCon$shinyModules[[1]], list(add=T, order = 1))
+  testthat::expect_equal(newCon$shinyModules[[1]], list(add=TRUE, order = 1))
   testthat::expect_equal(length(newCon$shinyModules),1)
   
   newCon <- addModuleConfig(
     config = newCon, 
-    moduleConfig = list(second=T)
+    moduleConfig = list(second=TRUE)
   )
   
-  testthat::expect_equal(newCon$shinyModules[[2]], list(second=T, order = 2))
+  testthat::expect_equal(newCon$shinyModules[[2]], list(second=TRUE, order = 2))
   testthat::expect_equal(length(newCon$shinyModules),2)
 
 })

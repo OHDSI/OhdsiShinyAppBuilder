@@ -7,3 +7,5 @@
 man-roxygen
 ^README\.md$
 ^NEWS\.md$
+^compare_versions$
+^deploy\.sh$

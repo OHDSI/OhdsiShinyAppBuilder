@@ -119,7 +119,7 @@ createShinyApp <- function(
       # to www-reports - this will be used in the home module
       summaryReportFolder <- file.path(tempdir(), 'reports')
       if(!dir.exists(summaryReportFolder)){
-        dir.create(summaryReportFolder, recursive = T)
+        dir.create(summaryReportFolder, recursive = TRUE)
       }
       Sys.setenv(shiny_report_folder = summaryReportFolder)
       shiny::addResourcePath("www-reports", summaryReportFolder)

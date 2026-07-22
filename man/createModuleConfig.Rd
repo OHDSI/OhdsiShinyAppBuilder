@@ -48,19 +48,19 @@ Create an R list with the config specification
 User specifies the settings to create a config for a module
 }
 \seealso{
-Other ModuleConfig: 
-\code{\link{createDefaultAboutConfig}()},
-\code{\link{createDefaultCharacterizationConfig}()},
-\code{\link{createDefaultCohortDiagnosticsConfig}()},
-\code{\link{createDefaultCohortGeneratorConfig}()},
-\code{\link{createDefaultCohortMethodConfig}()},
-\code{\link{createDefaultDatasourcesConfig}()},
-\code{\link{createDefaultEstimationConfig}()},
-\code{\link{createDefaultEvidenceSynthesisConfig}()},
-\code{\link{createDefaultHomeConfig}()},
-\code{\link{createDefaultPhevaluatorConfig}()},
-\code{\link{createDefaultPredictionConfig}()},
-\code{\link{createDefaultReportConfig}()},
-\code{\link{createDefaultSccsConfig}()}
+Other ModuleConfig:
+\code{\link[=createDefaultAboutConfig]{createDefaultAboutConfig()}},
+\code{\link[=createDefaultCharacterizationConfig]{createDefaultCharacterizationConfig()}},
+\code{\link[=createDefaultCohortDiagnosticsConfig]{createDefaultCohortDiagnosticsConfig()}},
+\code{\link[=createDefaultCohortGeneratorConfig]{createDefaultCohortGeneratorConfig()}},
+\code{\link[=createDefaultCohortMethodConfig]{createDefaultCohortMethodConfig()}},
+\code{\link[=createDefaultDatasourcesConfig]{createDefaultDatasourcesConfig()}},
+\code{\link[=createDefaultEstimationConfig]{createDefaultEstimationConfig()}},
+\code{\link[=createDefaultEvidenceSynthesisConfig]{createDefaultEvidenceSynthesisConfig()}},
+\code{\link[=createDefaultHomeConfig]{createDefaultHomeConfig()}},
+\code{\link[=createDefaultPhevaluatorConfig]{createDefaultPhevaluatorConfig()}},
+\code{\link[=createDefaultPredictionConfig]{createDefaultPredictionConfig()}},
+\code{\link[=createDefaultReportConfig]{createDefaultReportConfig()}},
+\code{\link[=createDefaultSccsConfig]{createDefaultSccsConfig()}}
 }
 \concept{ModuleConfig}

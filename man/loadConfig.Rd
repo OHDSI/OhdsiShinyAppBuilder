@@ -19,9 +19,9 @@ Load the config specification
 User specifies the config file and this function returns the R list with the config
 }
 \seealso{
-Other Config: 
-\code{\link{addModuleConfig}()},
-\code{\link{initializeModuleConfig}()},
-\code{\link{saveConfig}()}
+Other Config:
+\code{\link[=addModuleConfig]{addModuleConfig()}},
+\code{\link[=initializeModuleConfig]{initializeModuleConfig()}},
+\code{\link[=saveConfig]{saveConfig()}}
 }
 \concept{Config}

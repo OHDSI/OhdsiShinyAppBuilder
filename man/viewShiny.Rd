@@ -48,7 +48,7 @@ Open the shiny app
 User specifies the json config and connection
 }
 \seealso{
-Other Shiny: 
-\code{\link{createShinyApp}()}
+Other Shiny:
+\code{\link[=createShinyApp]{createShinyApp()}}
 }
 \concept{Shiny}

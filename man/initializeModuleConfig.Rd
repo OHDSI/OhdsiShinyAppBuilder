@@ -16,9 +16,9 @@ Creates an empty config
 An empty config that can be used to add shiny module configs to
 }
 \seealso{
-Other Config: 
-\code{\link{addModuleConfig}()},
-\code{\link{loadConfig}()},
-\code{\link{saveConfig}()}
+Other Config:
+\code{\link[=addModuleConfig]{addModuleConfig()}},
+\code{\link[=loadConfig]{loadConfig()}},
+\code{\link[=saveConfig]{saveConfig()}}
 }
 \concept{Config}

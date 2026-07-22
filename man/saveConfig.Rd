@@ -21,9 +21,9 @@ Save the R list with the config specification as a json
 User saves the R list with the config as a json file
 }
 \seealso{
-Other Config: 
-\code{\link{addModuleConfig}()},
-\code{\link{initializeModuleConfig}()},
-\code{\link{loadConfig}()}
+Other Config:
+\code{\link[=addModuleConfig]{addModuleConfig()}},
+\code{\link[=initializeModuleConfig]{initializeModuleConfig()}},
+\code{\link[=loadConfig]{loadConfig()}}
 }
 \concept{Config}

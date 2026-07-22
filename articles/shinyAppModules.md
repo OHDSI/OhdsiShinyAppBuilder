@@ -291,7 +291,7 @@ appTitle <- 'Example Foo App'
 studyDescription <- "An empty made up study for the vignette demo.  The shiny app with show one menu option called 'foo' that will not do anything."
 
 # specify whether you want to use a pooled connection
-usePooledConnection <- F
+usePooledConnection <- FALSE
 
 # open a shiny app that lets you explore results
 viewShiny(

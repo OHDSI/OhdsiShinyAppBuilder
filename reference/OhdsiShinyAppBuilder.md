@@ -8,6 +8,8 @@ A package for creating viewers for the OHDSI shiny apps
 
 Authors:
 
+- Jenna Reps <jreps@its.jnj.com>
+
 - Nathan Hall
 
 - Josh Ide

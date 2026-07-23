@@ -19,7 +19,8 @@ ui <- function(
     title = "OHDSI Analysis Viewer",
     studyDescription = "Further details about the analyses used in this study can be found below.",
     link = 'http://ohdsi.org',
-    themePackage = "OhdsiShinyAppBuilder"
+    themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = ''
 ) {
   
   shiny::addResourcePath(
@@ -35,6 +36,14 @@ ui <- function(
     for(dep in deps){
       depString <- paste0(depString, ' and ', dep," v", utils::packageVersion(dep))
     }
+  }
+
+  protocolLink <- if (
+    grepl("^[A-Za-z][A-Za-z0-9+.-]*:", link) || grepl("^//", link)
+  ) {
+    link
+  } else {
+    paste0("https://", link)
   }
   
   return(
@@ -52,20 +61,47 @@ ui <- function(
             style = "padding-top:0px; padding-bottom:0px;"
           ),
           class = "dropdown"
-        ),
-        shinydashboard::dropdownMenu(
-          type = "messages",
-          shinydashboard::messageItem(
-            from = "View Protocol",
-            message = "Click to view study design",
-            icon = shiny::icon("book"),
-            href = link
-          )
         )
       ),
       
       shinydashboard::dashboardSidebar(
-        shinydashboard::sidebarMenuOutput("sidebarMenu")
+
+        shiny::tags$div(
+          class = "sidebar-description-button",
+          style = "padding: 10px;",
+          shiny::tags$button(
+            type = "button",
+            class = "btn btn-info btn-block",
+            `data-toggle` = "modal",
+            `data-target` = "#studyDescriptionModal",
+            shiny::icon("lightbulb"),
+            " View Study Description"
+          ),
+          shiny::tags$p(
+            "Click to open study details",
+            style = "margin: 8px 0 0 0; font-size: 12px; color: #c9d0d8;"
+          )
+        ),
+        
+        shinydashboard::sidebarMenuOutput("sidebarMenu"),
+        
+        shiny::tags$div(
+          class = "sidebar-protocol-button",
+          style = "padding: 10px 10px 0 10px;",
+          shiny::tags$a(
+            href = protocolLink,
+            target = "_blank",
+            rel = "noopener noreferrer",
+            class = "btn btn-primary btn-block",
+            shiny::icon("book"),
+            " View Study Protocol"
+          ),
+          shiny::tags$p(
+            "Opens protocol in a new tab",
+            style = "margin: 8px 0 0 0; font-size: 12px; color: #c9d0d8;"
+          )
+        )
+
       ),
       # end sidebar
       
@@ -78,13 +114,48 @@ ui <- function(
             package = themePackage
           )
         ),
-        shinydashboard::box(
-          width = '100%',
-          title = shiny::span(
-            shiny::icon("lightbulb"), 
-            'Study Description'
-          ),
-          shiny::HTML(studyDescription)
+        shiny::tags$div(
+          id = "studyDescriptionModal",
+          class = "modal fade",
+          tabindex = "-1",
+          role = "dialog",
+          `aria-labelledby` = "studyDescriptionModalLabel",
+          shiny::tags$div(
+            class = "modal-dialog modal-lg",
+            role = "document",
+            shiny::tags$div(
+              class = "modal-content",
+              shiny::tags$div(
+                class = "modal-header",
+                shiny::tags$button(
+                  type = "button",
+                  class = "close",
+                  `data-dismiss` = "modal",
+                  `aria-label` = "Close",
+                  shiny::tags$span(`aria-hidden` = "true", "x")
+                ),
+                shiny::tags$h4(
+                  class = "modal-title",
+                  id = "studyDescriptionModalLabel",
+                  shiny::icon("lightbulb"),
+                  " Study Description"
+                )
+              ),
+              shiny::tags$div(
+                class = "modal-body",
+                shiny::HTML(studyDescription)
+              ),
+              shiny::tags$div(
+                class = "modal-footer",
+                shiny::tags$button(
+                  type = "button",
+                  class = "btn btn-default",
+                  `data-dismiss` = "modal",
+                  "Close"
+                )
+              )
+            )
+          )
         ),
         
         do.call(
@@ -113,6 +184,10 @@ ui <- function(
               depString
             )
           )
+        ),
+        
+        shiny::tags$head(
+          shiny::HTML(htmlHeader)
         )
         
       )

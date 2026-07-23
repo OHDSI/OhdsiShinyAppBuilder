@@ -14,6 +14,7 @@ createShinyApp(
   title = "OHDSI Analysis Viewer",
   protocolLink = "http://ohdsi.org",
   themePackage = "OhdsiShinyAppBuilder",
+  htmlHeader = "",
   reportSummaryDetails = NULL
 )
 }
@@ -36,6 +37,8 @@ createShinyApp(
 
 \item{themePackage}{A package containing custom theme elements}
 
+\item{htmlHeader}{Additional HTML to add to the shiny app header}
+
 \item{reportSummaryDetails}{NULL or a data.frame with the columns reportName and reportLocation}
 }
 \value{
@@ -48,7 +51,7 @@ Create a shiny app for a shiny server
 User specifies the json config and connection
 }
 \seealso{
-Other Shiny: 
-\code{\link{viewShiny}()}
+Other Shiny:
+\code{\link[=viewShiny]{viewShiny()}}
 }
 \concept{Shiny}

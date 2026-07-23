@@ -16,19 +16,19 @@ Create an R list with the phevaluator config specification
 User specifies the settings to create a default config for a phevaluator module
 }
 \seealso{
-Other ModuleConfig: 
-\code{\link{createDefaultAboutConfig}()},
-\code{\link{createDefaultCharacterizationConfig}()},
-\code{\link{createDefaultCohortDiagnosticsConfig}()},
-\code{\link{createDefaultCohortGeneratorConfig}()},
-\code{\link{createDefaultCohortMethodConfig}()},
-\code{\link{createDefaultDatasourcesConfig}()},
-\code{\link{createDefaultEstimationConfig}()},
-\code{\link{createDefaultEvidenceSynthesisConfig}()},
-\code{\link{createDefaultHomeConfig}()},
-\code{\link{createDefaultPredictionConfig}()},
-\code{\link{createDefaultReportConfig}()},
-\code{\link{createDefaultSccsConfig}()},
-\code{\link{createModuleConfig}()}
+Other ModuleConfig:
+\code{\link[=createDefaultAboutConfig]{createDefaultAboutConfig()}},
+\code{\link[=createDefaultCharacterizationConfig]{createDefaultCharacterizationConfig()}},
+\code{\link[=createDefaultCohortDiagnosticsConfig]{createDefaultCohortDiagnosticsConfig()}},
+\code{\link[=createDefaultCohortGeneratorConfig]{createDefaultCohortGeneratorConfig()}},
+\code{\link[=createDefaultCohortMethodConfig]{createDefaultCohortMethodConfig()}},
+\code{\link[=createDefaultDatasourcesConfig]{createDefaultDatasourcesConfig()}},
+\code{\link[=createDefaultEstimationConfig]{createDefaultEstimationConfig()}},
+\code{\link[=createDefaultEvidenceSynthesisConfig]{createDefaultEvidenceSynthesisConfig()}},
+\code{\link[=createDefaultHomeConfig]{createDefaultHomeConfig()}},
+\code{\link[=createDefaultPredictionConfig]{createDefaultPredictionConfig()}},
+\code{\link[=createDefaultReportConfig]{createDefaultReportConfig()}},
+\code{\link[=createDefaultSccsConfig]{createDefaultSccsConfig()}},
+\code{\link[=createModuleConfig]{createModuleConfig()}}
 }
 \concept{ModuleConfig}

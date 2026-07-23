@@ -31,6 +31,7 @@
 #' @param title The title for the app.  Defaults to: OHDSI Analysis Viewer
 #' @param protocolLink A link to a site containing the study protocol
 #' @param themePackage A package containing custom theme elements
+#' @param htmlHeader Additional HTML to add to the shiny app header
 #' @param reportSummaryDetails NULL or a data.frame with the columns reportName and reportLocation
 #'
 #' @return
@@ -48,6 +49,7 @@ createShinyApp <- function(
     title = "OHDSI Analysis Viewer",
     protocolLink = 'http://ohdsi.org',
     themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = '',
     reportSummaryDetails = NULL
       ){
   
@@ -81,7 +83,7 @@ createShinyApp <- function(
               if(deps$installSource[i] == "CRAN"){
                 utils::install.packages(deps$shinyModulePackage[i])
               } else{
-                devtools::install_github(paste0(deps$gitHubRepo[i],'/', deps$shinyModulePackage[i]))
+                remotes::install_github(paste0(deps$gitHubRepo[i],'/', deps$shinyModulePackage[i]))
               }
               versionNum <- tryCatch({utils::packageVersion(deps$shinyModulePackage[i])}, error = function(e) return(NULL))
             }
@@ -117,7 +119,7 @@ createShinyApp <- function(
       # to www-reports - this will be used in the home module
       summaryReportFolder <- file.path(tempdir(), 'reports')
       if(!dir.exists(summaryReportFolder)){
-        dir.create(summaryReportFolder, recursive = T)
+        dir.create(summaryReportFolder, recursive = TRUE)
       }
       Sys.setenv(shiny_report_folder = summaryReportFolder)
       shiny::addResourcePath("www-reports", summaryReportFolder)
@@ -172,7 +174,8 @@ createShinyApp <- function(
       title = title,
       link = protocolLink,
       studyDescription = studyDescription,
-      themePackage = themePackage
+      themePackage = themePackage,
+      htmlHeader = htmlHeader
     ),
     server = server(
       config = config, 
@@ -180,7 +183,7 @@ createShinyApp <- function(
       resultDatabaseSettings = resultDatabaseSettings
       ),
     onStart = function() {
-     shiny::onStop(connection$finalize)
+     shiny::onStop(connection$closeConnection)
     }
   )
 
@@ -210,7 +213,8 @@ viewShiny <- function(
     studyDescription = NULL,
     title = "OHDSI Analysis Viewer",
     protocolLink = 'http://ohdsi.org',
-    themePackage = "OhdsiShinyAppBuilder"
+    themePackage = "OhdsiShinyAppBuilder",
+    htmlHeader = ''
     ){
   
   app <- createShinyApp(
@@ -222,7 +226,8 @@ viewShiny <- function(
     studyDescription = studyDescription,
     title = title,
     protocolLink = protocolLink,
-    themePackage = themePackage
+    themePackage = themePackage,
+    htmlHeader = htmlHeader
     )
   
   shiny::runApp(app)

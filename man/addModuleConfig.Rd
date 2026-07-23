@@ -21,9 +21,9 @@ Create an R list with the config specification for one or more modules
 User specifies the settings to create a config for a module
 }
 \seealso{
-Other Config: 
-\code{\link{initializeModuleConfig}()},
-\code{\link{loadConfig}()},
-\code{\link{saveConfig}()}
+Other Config:
+\code{\link[=initializeModuleConfig]{initializeModuleConfig()}},
+\code{\link[=loadConfig]{loadConfig()}},
+\code{\link[=saveConfig]{saveConfig()}}
 }
 \concept{Config}

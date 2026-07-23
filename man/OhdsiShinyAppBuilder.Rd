@@ -13,6 +13,7 @@ A package for creating viewers for the OHDSI shiny apps
 
 Authors:
 \itemize{
+  \item Jenna Reps \email{jreps@its.jnj.com}
   \item Nathan Hall
   \item Josh Ide
   \item Jamie Gibert

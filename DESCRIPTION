@@ -1,8 +1,8 @@
 Package: OhdsiShinyAppBuilder
 Type: Package
 Title: Viewing Observational Health Data Sciences and Informatics Results via 'shiny' Modules
-Version: 1.0.0
-Date: 2024-12-09
+Version: 1.1.0
+Date: 2026-07-22
 Authors@R: c(
   person("Jenna", "Reps", email = "jreps@its.jnj.com", role = c("aut", "cre")),
   person("Nathan", "Hall", role = c("aut")),
@@ -10,7 +10,7 @@ Authors@R: c(
   person("Jamie", "Gibert", role = c("aut"))
   )
 Maintainer: Jenna Reps <jreps@its.jnj.com>
-Description: Users can build a single 'shiny' app for exploring population characterization, population-level causal effect estimation, and patient-level prediction results generated via the R analyses packages in 'HADES' (see <https://ohdsi.github.io/Hades/>). Learn more about 'OhdsiShinyAppBuilder' at <https://ohdsi.github.io/OhdsiShinyAppBuilder/dev>.
+Description: Users can build a single 'shiny' app for exploring population characterization, population-level causal effect estimation, and patient-level prediction results generated via the R analyses packages in 'HADES' (see <https://ohdsi.github.io/Hades/>). Learn more about 'OhdsiShinyAppBuilder' at <https://ohdsi.github.io/OhdsiShinyAppBuilder/>.
 License: Apache License 2.0
 VignetteBuilder: knitr
 Depends:
@@ -18,21 +18,21 @@ Depends:
 Imports:
   checkmate,
   DatabaseConnector,
-  devtools,
   dplyr,
   ParallelLogger (>= 2.0.0),
-  ResultModelManager (>= 0.4.0),
+  remotes,
+  ResultModelManager (>= 0.5.0),
   rlang,
   shiny,
   shinydashboard,
   utils
 Suggests:
+  devtools,
   Eunomia,
   jsonlite,
   knitr,
   rmarkdown,
   testthat,
-  markdown,
-  remotes
-RoxygenNote: 7.3.2
+  markdown
 Encoding: UTF-8
+Config/roxygen2/version: 8.0.0

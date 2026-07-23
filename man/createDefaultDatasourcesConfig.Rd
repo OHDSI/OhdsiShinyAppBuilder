@@ -16,19 +16,19 @@ Create an R list with the datasources config specification
 User specifies the settings to create a default config for a datasources module
 }
 \seealso{
-Other ModuleConfig: 
-\code{\link{createDefaultAboutConfig}()},
-\code{\link{createDefaultCharacterizationConfig}()},
-\code{\link{createDefaultCohortDiagnosticsConfig}()},
-\code{\link{createDefaultCohortGeneratorConfig}()},
-\code{\link{createDefaultCohortMethodConfig}()},
-\code{\link{createDefaultEstimationConfig}()},
-\code{\link{createDefaultEvidenceSynthesisConfig}()},
-\code{\link{createDefaultHomeConfig}()},
-\code{\link{createDefaultPhevaluatorConfig}()},
-\code{\link{createDefaultPredictionConfig}()},
-\code{\link{createDefaultReportConfig}()},
-\code{\link{createDefaultSccsConfig}()},
-\code{\link{createModuleConfig}()}
+Other ModuleConfig:
+\code{\link[=createDefaultAboutConfig]{createDefaultAboutConfig()}},
+\code{\link[=createDefaultCharacterizationConfig]{createDefaultCharacterizationConfig()}},
+\code{\link[=createDefaultCohortDiagnosticsConfig]{createDefaultCohortDiagnosticsConfig()}},
+\code{\link[=createDefaultCohortGeneratorConfig]{createDefaultCohortGeneratorConfig()}},
+\code{\link[=createDefaultCohortMethodConfig]{createDefaultCohortMethodConfig()}},
+\code{\link[=createDefaultEstimationConfig]{createDefaultEstimationConfig()}},
+\code{\link[=createDefaultEvidenceSynthesisConfig]{createDefaultEvidenceSynthesisConfig()}},
+\code{\link[=createDefaultHomeConfig]{createDefaultHomeConfig()}},
+\code{\link[=createDefaultPhevaluatorConfig]{createDefaultPhevaluatorConfig()}},
+\code{\link[=createDefaultPredictionConfig]{createDefaultPredictionConfig()}},
+\code{\link[=createDefaultReportConfig]{createDefaultReportConfig()}},
+\code{\link[=createDefaultSccsConfig]{createDefaultSccsConfig()}},
+\code{\link[=createModuleConfig]{createModuleConfig()}}
 }
 \concept{ModuleConfig}

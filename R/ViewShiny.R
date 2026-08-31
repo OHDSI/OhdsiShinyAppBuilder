@@ -144,7 +144,7 @@ createShinyApp <- function(
     if (missing(connection) || is.null(connection)) {
     checkmate::assertClass(connectionDetails, "ConnectionDetails")
 
-    if (connectionDetails$dbms != "sqlite") {
+    if (!connectionDetails$dbms %in% c("sqlite", "duckdb")) {
       if (length(list.files(connectionDetails$pathToDriver, pattern = connectionDetails$dbms)) == 0) {
         DatabaseConnector::downloadJdbcDrivers(
           dbms = connectionDetails$dbms,

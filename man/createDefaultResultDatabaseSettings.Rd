@@ -17,6 +17,7 @@ createDefaultResultDatabaseSettings(
   plpTablePrefix = "plp_",
   cmTablePrefix = "cm_",
   sccsTablePrefix = "sccs_",
+  sccTablePrefix = "scc_",
   esTablePrefix = "es_",
   pvTablePrefix = "pv_"
 )
@@ -45,6 +46,8 @@ createDefaultResultDatabaseSettings(
 \item{cmTablePrefix}{The table prefix for the cohort method results}
 
 \item{sccsTablePrefix}{The table prefix for the self controlled case series results}
+
+\item{sccTablePrefix}{The table prefix for the self controlled cohort results}
 
 \item{esTablePrefix}{The table prefix for the evidence synthesis method results}
 

@@ -34,6 +34,7 @@
 #' @param plpTablePrefix The table prefix for the prediction results
 #' @param cmTablePrefix The table prefix for the cohort method results
 #' @param sccsTablePrefix The table prefix for the self controlled case series results
+#' @param sccTablePrefix The table prefix for the self controlled cohort results
 #' @param esTablePrefix The table prefix for the evidence synthesis method results
 #' @param pvTablePrefix The table prefix for the phevaluator results
 #' 
@@ -56,6 +57,7 @@ createDefaultResultDatabaseSettings <- function(
     plpTablePrefix = 'plp_',
     cmTablePrefix = 'cm_',
     sccsTablePrefix = 'sccs_',
+    sccTablePrefix = 'scc_',
     esTablePrefix = 'es_',
     pvTablePrefix = 'pv_'
 ){
@@ -73,6 +75,7 @@ createDefaultResultDatabaseSettings <- function(
     plpTablePrefix = plpTablePrefix,
     cmTablePrefix = cmTablePrefix,
     sccsTablePrefix = sccsTablePrefix,
+    sccTablePrefix = sccTablePrefix,
     esTablePrefix = esTablePrefix,
     pvTablePrefix = pvTablePrefix
   )

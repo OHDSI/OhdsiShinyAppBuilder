@@ -387,6 +387,41 @@ createDefaultReportConfig <- function(
   return(result)
 }
 
+#' createDefaultSelfControlledCohortConfig
+#'
+#' @description
+#' Create an R list with the self controlled cohort config specification
+#'
+#' @details
+#' User specifies the settings to create a default config for a self controlled
+#' cohort module
+#' 
+#'                             
+#' @return
+#' An R list with the module config settings
+#' @family ModuleConfig
+#' @export
+createDefaultSelfControlledCohortConfig <- function(
+){
+  result <- createModuleConfig(
+    moduleId = 'selfControlledCohort',
+    tabName = "SelfControlledCohort",
+    shinyModulePackage = 'OhdsiShinyModules',
+    shinyModulePackageVersion = '3.6.0.9999',
+    moduleUiFunction = "selfControlledCohortViewer",
+    moduleServerFunction = "selfControlledCohortServer",
+    moduleInfoBoxFile =  "selfControlledCohortHelperFile()",
+    moduleIcon = "magnifying-glass-chart",
+    installSource = 'github',
+    gitHubRepo = 'ohdsi'
+  )
+  # keep the tab name free of spaces (used in the shiny input ids) but show a
+  # spaced label in the sidebar menu
+  result$tabText <- "Self Controlled Cohort"
+  
+  class(result) <- c(class(result), "selfControlledCohortModuleConfig")
+  return(result)
+}
 
 #' createDefaultCohortMethodConfig
 #'
